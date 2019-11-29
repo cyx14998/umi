@@ -1,0 +1,25 @@
+{
+  "name": "antd-umi-course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "set PORT=8810 BROWSER=none && umi dev",
+    "build": "umi build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "umi": "^2.12.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "jsonp": "^0.2.1",
+    "lodash.clonedeep": "^4.5.0",
+    "nprogress": "^0.2.0",
+    "react-router-redux": "^4.0.8",
+    "umi-plugin-react": "^1.14.6"
+  }
+}
