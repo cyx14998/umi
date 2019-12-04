@@ -5,6 +5,7 @@ import jsonp from 'jsonp'
 import cloneDeep from 'lodash.clonedeep'
 import pathToRegexp from 'path-to-regexp'
 import { message } from 'antd'
+import { clientId, brandId, domain } from './config'
 
 const fetch = (options) => {
   let {
@@ -15,18 +16,23 @@ const fetch = (options) => {
   } = options
 
   let cloneData = cloneDeep(data) || {}
-  if (url.indexOf('currentUser') === -1) {
-    if (localStorage.getItem('loginSession')) {
+  if (url.indexOf('login') === -1) {
+    const accessToken = sessionStorage.getItem('accessToken')
+    if (accessToken) {
       if (url.indexOf('?') < 0) {
-        url = url + '?session=' + localStorage.getItem('loginSession')
+        url = url + '?accessToken=' + accessToken
       } else {
-        url = url + '&session=' + localStorage.getItem('loginSession')
+        url = url + '&accessToken=' + accessToken
       }
     }
   }
+  if (url.indexOf('?') < 0) {
+    url = url + '?clientId=' + clientId + '&brandId=' + brandId
+  } else {
+    url = url + '&clientId=' + clientId + '&brandId=' + brandId
+  }
 
   try {
-    let domain = ''
     if (url.match(/[a-zA-z]+:\/\/[^/]*/)) {
       [domain] = url.match(/[a-zA-z]+:\/\/[^/]*/)
       url = url.slice(domain.length)

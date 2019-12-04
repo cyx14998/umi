@@ -19,6 +19,7 @@
     "jsonp": "^0.2.1",
     "lodash.clonedeep": "^4.5.0",
     "nprogress": "^0.2.0",
+    "query-string": "^6.9.0",
     "react-router-redux": "^4.0.8",
     "umi-plugin-react": "^1.14.6"
   }

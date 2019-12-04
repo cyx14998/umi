@@ -1,0 +1,131 @@
+@import "~themes/vars";
+
+:global {
+    .ant-list-item {
+        display: block;
+    }
+
+    .ant-list-split .ant-list-item {
+        border: none;
+    }
+
+    .ant-back-top {
+        bottom: 100px;
+    }
+
+    .mask {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        top: 0;
+    }
+
+    .ant-spin-spinning {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -19px;
+        margin-left: -16px;
+        z-index: 10;
+    }
+}
+
+.listPart {
+    width: 960px;
+    margin: auto;
+    font-size: 16px;
+    margin-top: 48px;
+}
+
+.list {}
+
+.listHead {
+    position: relative;
+    height: 30px;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+    background: #ebebeb;
+    z-index: 2;
+}
+
+.title {
+    font-size: 14px;
+    margin-left: 50px;
+    position: relative;
+    z-index: 3;
+    border-radius: 20px;
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    background-color: #f5f5f5;
+    max-width: 500px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.abMode {
+    color: orange;
+}
+
+.setTimes {
+    color: #00ba90;
+    font-weight: bold;
+}
+
+.itemList {
+    padding: 20px 0;
+}
+
+.item {
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.img1 {
+    width: 48px;
+    height: 48px;
+}
+
+.classTitle {
+    font-size: 20px;
+    color: #707070;
+    font-weight: bold;
+    margin-left: 32px;
+    flex: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.className {
+    width: 230px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.status {
+    margin-left: 23px;
+    color: #00ba90;
+}
+
+.noStart {
+    color: #ccc;
+}
+
+.statusImg {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}

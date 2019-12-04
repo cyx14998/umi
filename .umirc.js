@@ -6,8 +6,12 @@ export default {
             "changeOrigin": true,
             "pathRewrite": { "^/api/v1/weather": "/v3/weather" }
         },
-        "/sjyk/": {
-            "target": "http://192.168.1.167/",
+        "/gateway/": {
+            "target": "https://eapi.ciwong.com/",
+            "changeOrigin": true,
+        },
+        "/proxy/": {
+            "target": "http://192.168.16.209:3127/",
             "changeOrigin": true,
         }
     },
@@ -17,11 +21,12 @@ export default {
         services: resolve(__dirname, "./src/services"),
         themes: resolve(__dirname, './src/themes'),
         utils: resolve(__dirname, "./src/utils"),
+        img: resolve(__dirname, "./src/img"),
         // config: resolve(__dirname, "./src/utils/config"),
         // enums: resolve(__dirname, "./src/utils/enums"),
         // routes: resolve(__dirname, "./src/routes"),
-        // img: resolve(__dirname, "./src/img"),
     },
+    history: 'hash',
     plugins: [
         ['umi-plugin-react', {
             antd: true,
@@ -35,6 +40,9 @@ export default {
     theme: {
         "border-color-base": "#d9d9d9",
         'border-color-split': '#d9d9d9'
+    },
+    targets: {
+        ie: 9,
     },
     base: '/',
     publicPath: '/'

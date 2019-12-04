@@ -1,0 +1,100 @@
+@import "~themes/vars";
+
+:global {
+
+    .ant-table-thead>tr>th,
+    .ant-table-tbody>tr>td {
+        text-align: center;
+    }
+
+    .ant-table-thead>tr>th,
+    .ant-table-tbody>tr>td {
+        padding: 10px 5px;
+    }
+
+    .ant-modal-confirm-body {
+        display: flex;
+        justify-content: center;
+    }
+
+    .ant-modal-confirm .ant-modal-confirm-btns {
+        float: none;
+        margin-top: 24px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ant-modal-confirm .ant-modal-confirm-btns button+button {
+        margin-left: 25px;
+    }
+}
+
+.detailPart {
+    margin-top: 36px;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .name {
+            font-family: PingFang SC;
+            font-size: 20px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 28px;
+            letter-spacing: 0px;
+            color: #707070;
+            width: 500px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .abMode {
+            color: orange;
+        }
+
+        .setTimes {
+            color: #00ba90;
+            font-weight: bold;
+        }
+
+    }
+
+    .table {
+        margin-top: 40px;
+    }
+
+    .btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+            width: 130px;
+            height: 36px;
+            line-height: 36px;
+            background-color: #00ba90;
+            border-radius: 24px;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+
+            &.btnDisabled {
+                cursor: not-allowed;
+                background-color: #f5f5f5;
+                color: #c1c1c1;
+            }
+
+            img {
+                width: 20px;
+                height: 25px;
+            }
+
+            &+.btn {
+                margin-left: 30px;
+            }
+        }
+    }
+}

@@ -1,3 +1,3 @@
 import Redirect from 'umi/redirect'
 
-export default () => <Redirect to="/helloworld" />
+export default () => <Redirect to="/login" />
